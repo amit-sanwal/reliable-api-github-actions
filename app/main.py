@@ -15,3 +15,8 @@ def read_root():
 @app.get("/health", tags=["health"])
 def health_check():
     return {"status": "healthy"}
+
+
+@app.get("/version", tags=["metadata"])
+def get_version():
+    return {"version": app.version}
